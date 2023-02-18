@@ -11,7 +11,6 @@ notified of it's completion.
 ## Usage
 
 Like any CTF, your goal is to find a key, which will be a long hex string. In
-<<<<<<< HEAD
 each `level` directory, you will find the following files:
 
 - `__init__.py` run this to initialize the server.
