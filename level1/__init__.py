@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # app.py
 
-from flask import Flask, render_template_string, request
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def index():
     else:
         user_in = "Say hey to the form!"
     with open("./app/index.html", "r") as stream:
-        return render_template_string(stream.read() % (user_in))
+        return stream.read() % (user_in))
 
 @app.route("/index.js")
 def index_js():
