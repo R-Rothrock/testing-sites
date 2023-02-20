@@ -25,5 +25,5 @@ stumped.
 
 ### Note
 
-Accessing the `static` directory is cheating, and only read `__init__.py` as a
+Accessing the `templates` directory is cheating, and only read `__init__.py` as a
 hint.
