@@ -15,22 +15,15 @@ each `level` directory, you will find the following files:
 
 - `__init__.py` run this to initialize the server.
 - `requirements.txt` the requirements of the `__init__.py` script.
-- `sha256.txt` a SHA256 representation of the key.
+- `sha256.txt` a SHA256 representation of the key, for key verification.
 
 You will also find the following directories:
 
-- `static` where all static files are stored.
+- `templates` where all static files are stored.
 - `exploit` where a description and/or exploit code is stored. Only if you're
 stumped.
 
 ### Note
+
 Accessing the `static` directory is cheating, and only read `__init__.py` as a
 hint.
-
-## Also, FYI
-If you're curious about the security of this code, take a look at
-[SECURITY.md](https://github.com/R-Rothrock/testing_sites/blob/main/SECURITY.md).
-Hint; not very secure.
-
-If that doesn't do it, this software is licensed under the _Unlicense_.
-

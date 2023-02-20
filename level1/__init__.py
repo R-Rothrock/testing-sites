@@ -11,12 +11,12 @@ def index():
         user_in = request.form["in"]
     else:
         user_in = "Say hey to the form!"
-    with open("./app/index.html", "r") as stream:
-        return stream.read() % (user_in))
+    with open("./templates/index.html", "r") as stream:
+        return stream.read() % user_in
 
 @app.route("/index.js")
 def index_js():
-    with open("./app/index.js", "r") as stream:
+    with open("./templates/index.js", "r") as stream:
         return stream.read()
 
 if __name__ == "__main__":
