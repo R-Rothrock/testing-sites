@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <title>Level 2 - Vulnerable Flask Applications</title>
-    <script src="./index.js">
+    <script src="/index.js"></script>
   </head>
   <body>
     <h1>Comments:</h1>
     {% for comment in comments %}
-      <p>{{comment}}</p>
+      <p>{{comment|safe}}</p>
     {% endfor %}
+    <h3>Post your own comments <a href="/submit">here</a></h3>
   </body>
 </html>

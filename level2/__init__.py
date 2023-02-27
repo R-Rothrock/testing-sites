@@ -14,17 +14,17 @@ comments = [
 @app.route("/")
 def index():
     with open("./templates/index.html", "r") as stream:
-        return render_template_string(stream.read(), comments=comments)
+        return render_template("index.html", comments=comments)
 
-@app.route("/nameyouwouldntguess.js")
+@app.route("/index.js")
 def index_js():
-    with open("index.js", "r") as stream:
-        return stream.read()
+    return render_template("index.js")
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
-    if request.method == "GET":
-        comment.append(request.form["comment"])
+    if request.method == "POST":
+        print(request.form)
+        comments.append(request.form["submit"])
     return render_template("submit.html")
 
 if __name__ == "__main__":
