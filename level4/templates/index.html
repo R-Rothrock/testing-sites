@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Level 4 - Vulnerable Flask Applications</title>
+</head>
+<body>
+  <h1>Free DNS Resolution</h1>
+  <h3>Enter you domain or IP here</h1>
+  <form method="post" action="/">
+    <input type="text" name="submit">
+    <input type="submit">
+  </form>
+  {{ dns_ret }}
+</body>
