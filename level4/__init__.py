@@ -9,41 +9,15 @@
 
 from flask import Flask, render_template, request
 import subprocess
-import time
-import threading
 
 dns_ret = "waiting for input"
 
-def get_output(cmd: str, shell="/bin/bash") -> str:
+def get_output(cmd: str) -> str:
     """
-    This code is horrible. But it should work for you :)
-    I programmed this on a Saturday morning, don't blame me.
+    Gets output of command.
     """
-
-    cmd = cmd.encode("utf-8")
-
-    process = subprocess.Popen(shell, stdout=subprocess.PIPE,
-                               stdin=subprocess.PIPE)
-
-    process.stdin.write(cmd)
-    process.stdin.flush()
-
-    ret = str()
-
-    activator = False
-
-    def timer(sec: int):
-        """ Small threading timer functionality. Waits for sleep """
-        nonlocal activator
-        time.sleep(sec)
-        activator = True
-
-    threading.Thread(target=timer, args=(5,)).start()
-
-    while not activator:
-        ret += process.stdout.read(1)
-
-    return ret
+    stream = subprocess.run(cmd, capture_output=True, shell=True)
+    return stream.stdout.decode()
 
 app = Flask(__name__)
 
