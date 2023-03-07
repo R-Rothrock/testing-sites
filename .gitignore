@@ -1,5 +1,5 @@
-# virtual environment I use for flask development
-env/
+# virtual environments I use for flask development
+/env/
 
 # pycache - as always
 __pycache__
