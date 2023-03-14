@@ -1,5 +1,8 @@
 # virtual environments I use for flask development
 /env/
 
+# scripts I use to both start the venvs and servers
+/*/run
+
 # pycache - as always
 __pycache__
