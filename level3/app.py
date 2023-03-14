@@ -8,5 +8,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/robots.txt")
+def robots():
+    return render_template("robots.txt")
+
 if __name__ == "__main__":
     app.run(host="localhost", port=5001, debug=False)

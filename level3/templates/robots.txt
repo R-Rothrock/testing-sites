@@ -1,0 +1,2 @@
+# good for you! There are two ways to complete this level and you've found one.
+# The other is looking at the webpage with the dev tools. You'll find the key in a comment.
