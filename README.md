@@ -1,29 +1,17 @@
 # Testing Sites
-Various CTF-like _Flask_ applications and corresponding exploits. The directory
-structure is in levels, with the intent that `level1` is easier than `level4`
-and so on.
 
----
+This is a repository of various Python Flask applications designed similar to CTF
+challenges. They are categorized by level (`level1`, `level2`, etc.) with the intent that
+higher levels are more difficult.
 
-This project is still being developed. Feel free to watch this repository to be
-notified of it's ~~completion~~ progress.
+## Uage
 
-## Usage
+The manifest for each level directory:
+ - `app.py` the flask server itself
+ - `requirements.txt` the requirements of the flask server.
+ - `sha256.txt` a SHA256 representation of the key for key verification.
+ - `templates/` where all the static files are stored (looking in here is cheating).
+ - `exploit/` contains a description and instructions in case you're stumped.
 
-Like any CTF, your goal is to find a key, which will be a long hex string. In
-each `level` directory, you will find the following files:
-
-- `app.py` run this to initialize the server.
-- `requirements.txt` the requirements of the `__init__.py` script.
-- `sha256.txt` a SHA256 representation of the key, for key verification.
-
-You will also find the following directories:
-
-- `templates` where all static files are stored.
-- `exploit` where a description and/or exploit code is stored. Only if you're
-stumped.
-
-### Note
-
-Accessing the `templates` directory is cheating, and only read `__init__.py` as a
-hint.
+First, confirm the requirements in `requirements.txt` are fufilled. Then, simply run
+`app.py` to initialize the server. It should be accessable at `localhost:5001`.
