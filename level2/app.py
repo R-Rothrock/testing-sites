@@ -8,7 +8,7 @@ comments = [
     "Lorem ipsum dolor sit amet.",
     "consetetur apidiscing elit.",
     "Nam quid quo cicero erunt.",
-    "Itaque Romani partem Gallos occiderunt."
+    "Itaque Romani partem princepes Gallos occiderunt."
 ]
 
 @app.route("/")
